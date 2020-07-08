@@ -1,0 +1,9 @@
+name: 'linux-pkg build'
+inputs:
+  package:
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.package }}
